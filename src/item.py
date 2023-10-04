@@ -29,4 +29,8 @@ class Item:
         """
         Применяет установленную скидку для конкретного товара.
         """
-        pass
+        return self.price * self.pay_rate
+
+
+    def adds(self):
+        self.all.append(__object=__name__)
