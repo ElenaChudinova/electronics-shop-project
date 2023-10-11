@@ -20,7 +20,7 @@ def test_string_to_number(item):
     assert item.string_to_number('5.5') == 5
 
 def test__repr__(item):
-    assert item.__repr__() == "Item('Смартфон, 10000, 20')"
+    assert item.__repr__() == "Item('Смартфон', 10000, 20)"
 
 def test__str__(item):
     assert item.__str__() == 'Смартфон'
