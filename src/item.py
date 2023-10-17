@@ -1,6 +1,7 @@
 import csv
 
 
+
 class Item:
     """
     Класс для представления товара в магазине.
@@ -27,6 +28,13 @@ class Item:
 
     def __str__(self):
         return f'{self.__name}'
+
+    def __add__(self, other):
+        if isinstance(other, Item):
+            return self.quantity + other.quantity
+        raise TypeError("Складывать можно только объекты классов с родительским классом Item")
+
+
 
     @property
     def set_name(self):
