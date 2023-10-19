@@ -47,6 +47,7 @@ class Item:
         else:
             self.__name = name[:10]
 
+
     @classmethod
     def instantiate_from_csv(cls, items_csv):
         cls.all.clear()
