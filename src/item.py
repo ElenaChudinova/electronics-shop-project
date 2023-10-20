@@ -17,9 +17,11 @@ class Item:
         :param price: Цена за единицу товара.
         :param quantity: Количество товара в магазине.
         """
+        super().__init__()
         self.__name = name
         self.price = price
         self.quantity = quantity
+
 
         Item.all.append((self))
 
@@ -33,8 +35,6 @@ class Item:
         if isinstance(other, Item):
             return self.quantity + other.quantity
         raise TypeError("Складывать можно только объекты классов с родительским классом Item")
-
-
 
     @property
     def set_name(self):
