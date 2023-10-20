@@ -13,7 +13,7 @@ def test_number_of_sim(phone):
         phone.number_of_sim = 1.2
 
 def test__repr__(phone):
-    assert repr(phone) == "Phone('iPhone 14', 120000, 5)"
+    assert repr(phone) == "Phone('iPhone 14', 120000, 5, 2)"
 
 
 def test__add__(phone):
