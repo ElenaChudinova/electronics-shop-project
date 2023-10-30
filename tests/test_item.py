@@ -1,6 +1,8 @@
 import pytest
 from src.item import Item
+from src.item import InstantiateCSVError
 
+items_csv = "./item.csv"
 
 @pytest.fixture
 def item():
@@ -27,4 +29,12 @@ def test__str__(item):
 
 def test__add__(item):
     assert item + item == 40
+
+def test_instantiate_from_csv_error():
+    with pytest.raises(FileNotFoundError):
+        Item.instantiate_from_csv(items_csv = "./item.csv")
+
+def test_instantiate_from_csv_damaged():
+    with pytest.raises(InstantiateCSVError):
+        Item.instantiate_from_csv('items_csv')
 
